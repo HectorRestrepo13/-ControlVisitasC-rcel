@@ -48,7 +48,7 @@
                                 <tbody>
                                     @foreach ($pricioneros as $pricionero)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                         
                                             
 											<td>{{ $pricionero->nombreCompleto }}</td>
 											<td>{{ $pricionero->fechaNacimiento }}</td>
@@ -57,9 +57,9 @@
 											<td>{{ $pricionero->celdaAsignada }}</td>
 
                                             <td>
-                                                <form action="{{ route('pricioneros.destroy',$pricionero->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('pricioneros.show',$pricionero->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('pricioneros.edit',$pricionero->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('pricionero.destroy',$pricionero->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('pricionero.show',$pricionero->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('pricionero.edit',$pricionero->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $pricioneros->links() !!}
+              
             </div>
         </div>
     </div>

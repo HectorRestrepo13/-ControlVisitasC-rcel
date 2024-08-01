@@ -16,10 +16,9 @@ class PricioneroController extends Controller
      */
     public function index()
     {
-        $pricioneros = Pricionero::paginate();
+        $pricioneros = Pricionero::all();
 
-        return view('pricionero.index', compact('pricioneros'))
-            ->with('i', (request()->input('page', 1) - 1) * $pricioneros->perPage());
+        return view('pricionero.index', compact('pricioneros'));
     }
 
     /**
